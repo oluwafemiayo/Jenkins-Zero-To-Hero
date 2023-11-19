@@ -55,9 +55,9 @@ pipeline {
                 sh '''
                     git config user.email "olufemi123ayo@gmail.com"
                     git config user.name "oluwafemi ayo"
-                    #BUILD_NUMBER=${BUILD_NUMBER}
+                    BUILD_NUMBER=${BUILD_NUMBER}
                     cat java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
-                    sed -i 's+machala/ultimate-cicd.*+machala/ultimate-cicd:${env.BUILD_NUMBER}+g' java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
+                    sed -i 's+machala/ultimate-cicd.*+machala/ultimate-cicd:i+g' java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     cat java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     git add .
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
