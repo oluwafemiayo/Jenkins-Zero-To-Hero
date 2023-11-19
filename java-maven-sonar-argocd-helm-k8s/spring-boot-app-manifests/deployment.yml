@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: machala/ultimate-cicd:${BUILD_NUMBER}
+        image: machala/ultimate-cicd:3
         ports:
         - containerPort: 8080
